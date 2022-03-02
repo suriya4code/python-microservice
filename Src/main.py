@@ -34,7 +34,7 @@ class Base(Resource, MethodResource):
     
     def get(self):
         host, ip = get_Host_name_IP()
-        return f'Up and runnning !!! in => {host} at address => {ip} try "/films" or "/film/<string:title>"'
+        return f'Up and runnning !!! in => {host} at address => {ip} try /films or /film/<string:title>'
 
 class Film(Resource, MethodResource):
     def __init__(self):
@@ -88,4 +88,4 @@ api.add_resource(Film,"/film/<string:title>")
 api.add_resource(Films,"/films")
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host ='0.0.0.0', port = 5000, debug = True) 
