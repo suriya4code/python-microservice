@@ -7,7 +7,7 @@ spec:
     app: micro-app
   ports:
   - protocol: "TCP"
-    port: 6000
+    port: 80
     targetPort: 5000
   type: LoadBalancer
 
@@ -28,7 +28,7 @@ spec:
     spec:
       containers:
       - name: micro-app
-        image: microapp
+        image: suriya4code/python-flask-microservice
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 5000
