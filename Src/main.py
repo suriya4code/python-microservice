@@ -9,8 +9,7 @@ api = Api(app)
 
 films = json.load(open('Src/Film.json'))
 
-# Function to display hostname and
-# IP address
+# Function to display hostname and IP address
 def get_Host_name_IP():
     try:
         host_name = socket.gethostname()
